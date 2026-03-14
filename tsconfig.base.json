@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@bdi-ai/models": ["packages/models/src/index.ts"],
+      "@bdi-ai/persistence": ["packages/persistence/src/index.ts"],
+      "@bdi-ai/components": ["packages/components/src/index.ts"],
+      "@bdi-ai/llm": ["packages/llm/src/index.ts"],
+      "@bdi-ai/agent": ["packages/agent/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

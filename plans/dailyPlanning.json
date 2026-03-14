@@ -1,0 +1,38 @@
+{
+  "plans": [
+    {
+      "id": "morning_routine",
+      "name": "Morning Routine",
+      "goalPattern": ".*morning.*|.*start.*day.*",
+      "triggerCondition": "time is morning",
+      "estimatedCost": 1.5,
+      "source": "library",
+      "steps": [
+        {
+          "stepId": "s1",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Good morning! Starting morning routine..." },
+          "description": "Greet the day",
+          "onFailure": "continue"
+        },
+        {
+          "stepId": "s2",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Reviewing yesterday's incomplete tasks..." },
+          "description": "Review backlog",
+          "onFailure": "continue"
+        },
+        {
+          "stepId": "s3",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Morning routine complete!" },
+          "description": "Complete routine",
+          "onFailure": "continue"
+        }
+      ]
+    }
+  ]
+}

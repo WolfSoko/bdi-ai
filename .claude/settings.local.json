@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"E:/claude/bdi-ai\" && npm install 2>&1)",
+      "Bash(cd \"E:/claude/bdi-ai\" && npm test 2>&1)",
+      "Bash(cd E:/claude/bdi-ai && npx nx run-many -t test 2>&1)",
+      "Bash(cd E:/claude/bdi-ai && npx nx reset 2>&1 && npx nx run-many -t test 2>&1)",
+      "Bash(cd E:/claude/bdi-ai && npx nx graph --print 2>&1 | head -30)"
+    ]
+  }
+}

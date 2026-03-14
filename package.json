@@ -1,0 +1,24 @@
+{
+  "name": "@bdi-ai/root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BDI Rational Agent Framework powered by Claude",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "nx run-many -t build",
+    "test": "nx run-many -t test",
+    "dev": "nx run @bdi-ai/examples:dev",
+    "lint": "nx run-many -t lint"
+  },
+  "devDependencies": {
+    "nx": "^20.0.0",
+    "typescript": "^5.5.0",
+    "tsx": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/uuid": "^10.0.0",
+    "vitest": "^2.0.0"
+  }
+}

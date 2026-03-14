@@ -1,0 +1,98 @@
+{
+  "plans": [
+    {
+      "id": "write_report",
+      "name": "Write a Report",
+      "goalPattern": ".*write.*report.*",
+      "triggerCondition": "has belief: 'report due soon'",
+      "estimatedCost": 3.0,
+      "source": "library",
+      "steps": [
+        {
+          "stepId": "s1",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Starting report outline..." },
+          "description": "Begin report writing process",
+          "onFailure": "continue"
+        },
+        {
+          "stepId": "s2",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Drafting report content sections..." },
+          "description": "Draft main sections",
+          "onFailure": "continue"
+        },
+        {
+          "stepId": "s3",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Report writing complete." },
+          "description": "Finalize report",
+          "onFailure": "continue"
+        }
+      ]
+    },
+    {
+      "id": "clear_inbox",
+      "name": "Clear Email Inbox",
+      "goalPattern": ".*inbox.*|.*email.*",
+      "triggerCondition": "has belief: 'emails pending'",
+      "estimatedCost": 2.0,
+      "source": "library",
+      "steps": [
+        {
+          "stepId": "s1",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Scanning inbox for unread messages..." },
+          "description": "Scan inbox",
+          "onFailure": "continue"
+        },
+        {
+          "stepId": "s2",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Processing and archiving emails..." },
+          "description": "Process emails",
+          "onFailure": "continue"
+        }
+      ]
+    },
+    {
+      "id": "daily_planning",
+      "name": "Daily Planning",
+      "goalPattern": ".*plan.*day.*|.*daily.*",
+      "triggerCondition": "start of day",
+      "estimatedCost": 1.0,
+      "source": "library",
+      "steps": [
+        {
+          "stepId": "s1",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Reviewing today's schedule and priorities..." },
+          "description": "Review schedule",
+          "onFailure": "continue"
+        },
+        {
+          "stepId": "s2",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Setting top 3 priorities for today..." },
+          "description": "Set priorities",
+          "onFailure": "continue"
+        },
+        {
+          "stepId": "s3",
+          "actionType": "tool_call",
+          "actionName": "logMessage",
+          "parameters": { "message": "Daily planning complete. Ready to execute!" },
+          "description": "Complete planning",
+          "onFailure": "continue"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@bdi-ai/agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc -b tsconfig.lib.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@bdi-ai/models": "*",
+    "@bdi-ai/components": "*",
+    "@bdi-ai/llm": "*",
+    "dotenv": "^16.0.0"
+  }
+}

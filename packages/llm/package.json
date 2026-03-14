@@ -1,0 +1,17 @@
+{
+  "name": "@bdi-ai/llm",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc -b tsconfig.lib.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "@bdi-ai/models": "*",
+    "uuid": "^10.0.0"
+  }
+}

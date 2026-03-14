@@ -1,0 +1,14 @@
+{
+  "name": "@bdi-ai/examples",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/simpleAgent.ts",
+    "dev:task": "tsx src/taskAgent.ts"
+  },
+  "dependencies": {
+    "@bdi-ai/agent": "*",
+    "dotenv": "^16.0.0"
+  }
+}
