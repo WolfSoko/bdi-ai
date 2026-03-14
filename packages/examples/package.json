@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "tsx src/simpleAgent.ts",
-    "dev:task": "tsx src/taskAgent.ts"
+    "dev:task": "tsx src/taskAgent.ts",
+    "dev:web": "tsx src/webAgent.ts"
   },
   "dependencies": {
     "@bdi-ai/agent": "*",
+    "@bdi-ai/web-ui": "*",
     "dotenv": "^16.0.0"
   }
 }

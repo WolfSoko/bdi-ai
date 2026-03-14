@@ -19,7 +19,8 @@
       "@bdi-ai/persistence": ["packages/persistence/src/index.ts"],
       "@bdi-ai/components": ["packages/components/src/index.ts"],
       "@bdi-ai/llm": ["packages/llm/src/index.ts"],
-      "@bdi-ai/agent": ["packages/agent/src/index.ts"]
+      "@bdi-ai/agent": ["packages/agent/src/index.ts"],
+      "@bdi-ai/web-ui": ["packages/web-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "dist"]

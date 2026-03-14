@@ -5,7 +5,8 @@
       "Bash(cd \"E:/claude/bdi-ai\" && npm test 2>&1)",
       "Bash(cd E:/claude/bdi-ai && npx nx run-many -t test 2>&1)",
       "Bash(cd E:/claude/bdi-ai && npx nx reset 2>&1 && npx nx run-many -t test 2>&1)",
-      "Bash(cd E:/claude/bdi-ai && npx nx graph --print 2>&1 | head -30)"
+      "Bash(cd E:/claude/bdi-ai && npx nx graph --print 2>&1 | head -30)",
+      "Bash(cd \"E:/claude/bdi-ai\" && timeout 5 npx tsx packages/examples/src/webAgent.ts 2>&1 || true)"
     ]
   }
 }

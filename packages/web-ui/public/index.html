@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BDI Agent Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <h1 class="agent-name" id="agent-name">BDI Agent</h1>
+      <span class="badge" id="cycle-badge">Cycle 0</span>
+      <span class="connection-dot" id="conn-dot" title="Disconnected"></span>
+    </div>
+    <div class="topbar-right">
+      <button class="btn" id="btn-step" title="Run one cycle">Step</button>
+      <button class="btn btn-primary" id="btn-start" title="Auto-run">Start</button>
+      <button class="btn btn-danger" id="btn-stop" title="Stop" disabled>Stop</button>
+      <label class="interval-label">
+        <input type="number" id="interval-input" value="3000" min="500" step="500">
+        <span>ms</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <!-- Left column -->
+    <section class="panel beliefs-panel">
+      <div class="panel-header">
+        <h2>Beliefs</h2>
+        <span class="count" id="belief-count">0</span>
+      </div>
+      <div class="panel-body" id="beliefs-list"></div>
+    </section>
+
+    <section class="panel goals-panel">
+      <div class="panel-header">
+        <h2>Goals</h2>
+        <span class="count" id="goal-count">0</span>
+      </div>
+      <div class="panel-body" id="goals-list"></div>
+    </section>
+
+    <!-- Right column -->
+    <section class="panel intentions-panel">
+      <div class="panel-header">
+        <h2>Intentions</h2>
+        <span class="count" id="intention-count">0</span>
+      </div>
+      <div class="panel-body" id="intentions-list"></div>
+    </section>
+
+    <section class="panel history-panel">
+      <div class="panel-header">
+        <h2>Cycle History</h2>
+        <span class="count" id="history-count">0</span>
+      </div>
+      <div class="panel-body" id="history-list"></div>
+    </section>
+  </main>
+
+  <!-- Perception input -->
+  <div class="perception-bar">
+    <input type="text" id="perception-input" placeholder="Enter a perception for the agent..." autocomplete="off">
+    <button class="btn btn-primary" id="btn-send">Send</button>
+  </div>
+
+  <!-- Event log -->
+  <section class="event-log-section">
+    <div class="panel-header clickable" id="eventlog-toggle">
+      <h2>Event Log</h2>
+      <span class="toggle-arrow" id="eventlog-arrow">&#9660;</span>
+    </div>
+    <div class="event-log-body" id="event-log"></div>
+  </section>
+
+  <!-- Belief detail modal -->
+  <div class="modal-overlay" id="belief-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Belief Detail</h3>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
